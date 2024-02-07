@@ -13,5 +13,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.2.4"
   }
 }
