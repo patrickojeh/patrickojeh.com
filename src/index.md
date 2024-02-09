@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: layouts/page.html
+layout: layouts/page.njk
 ---
 
 # About
