@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="x-base-url" content="{{ site.url }}"/>
+    <title>{{ title }} {% if site.name %} – {{ site.name }} {% endif %}</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <!-- <script src="{{ site.url }}/js/app.js"></script> -->
+  </body>
+</html>
