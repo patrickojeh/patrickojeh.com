@@ -1,10 +1,22 @@
-// const eleventySass = require('@11ty/eleventy');
+const eleventySass = require('eleventy-sass');
 
 module.exports = function (config) {
+  config.addPlugin(eleventySass, {
+    compileOptions: {
+      permalink: function() {
+        return data => data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+      }
+    },
+    sass: {
+      style: "compressed",
+      sourceMap: false
+    }
+  });
+
   return {
     dir: {
       input: "src",
       output: "dist",
     },
   };
-}
+};
