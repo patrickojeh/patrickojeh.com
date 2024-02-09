@@ -1,6 +1,8 @@
 const eleventySass = require('eleventy-sass');
 
 module.exports = function (config) {
+  config.addPassthroughCopy('./src/js/');
+
   config.addPlugin(eleventySass, {
     compileOptions: {
       permalink: function() {
