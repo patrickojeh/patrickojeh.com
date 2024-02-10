@@ -1,1 +1,1 @@
-import { test } from "./test.js";
+import spa from "./spa.js";

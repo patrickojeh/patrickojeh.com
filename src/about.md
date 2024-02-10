@@ -3,7 +3,7 @@ title: Home
 layout: layouts/page.njk
 ---
 
-# Home
+# About
 
 Helloo world.
-[About](/about)
+[Home](/)
