@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve",
-    "prepare": "husky"
+    "prepare": "husky && husky install"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,8 @@
   },
   "dependencies": {
     "eleventy-sass": "^2.2.4"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

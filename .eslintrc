@@ -2,5 +2,10 @@
   "extends": ["wesbos"],
   "rules": {
     "no-unused-vars": 2
+  },
+  "settings": {
+    "react": {
+      "version": "999.999.999" // Set a version that doesn't exist to disable version detection
+    }
   }
 }
