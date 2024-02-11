@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Load content into page without a whole page reload
  * @param {string} href URL to route to
@@ -9,7 +7,7 @@ export function load(href, pushState) {
   const container = $('main');
   const progressBar = document.getElementById('progress-bar');
   const progressContainer = document.getElementById('progress-container');
-  
+
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function () {
@@ -24,28 +22,27 @@ export function load(href, pushState) {
     progressContainer.style.display = 'none';
 
     if (pushState) {
-      history.pushState({}, dTitle, href);
+      window.history.pushState({}, dTitle, href);
     }
 
     container.focus();
-    
+
     window.scrollTo(0, 0);
   };
 
   xhr.onerror = function () {
     // fallback to normal link behaviour
     document.location.href = href;
-    return;
   };
 
-  xhr.addEventListener('loadstart', function () {
+  xhr.addEventListener('loadstart', () => {
     progressContainer.style.display = 'block';
   });
 
-  xhr.addEventListener('progress', function (e) {
+  xhr.addEventListener('progress', (e) => {
     if (e.lengthComputable) {
       const percentage = (e.loaded / e.total) * 100;
-      progressBar.style.width = percentage + '%';
+      progressBar.style.width = `${percentage}%`;
     }
   });
 
@@ -66,7 +63,9 @@ function $(sel, con) {
  * @returns the anchor tag or null
  */
 function findAnchorTag(el, maxNests = 3) {
-  for (let i = maxNests; el && i > 0; --i, el = el.parentNode) {
+  let element = el;
+
+  for (let i = maxNests; element && i > 0; i -= 1, element = el.parentNode) {
     if (el.nodeName === 'A') {
       return el;
     }
@@ -74,8 +73,8 @@ function findAnchorTag(el, maxNests = 3) {
   return null;
 }
 
-window.addEventListener('click', function (evt) {
-  let baseUrl = $('meta[name="x-base-url"]')?.getAttribute('content') || '/';
+window.addEventListener('click', (evt) => {
+  const baseUrl = $('meta[name="x-base-url"]')?.getAttribute('content') || '/';
   const el = findAnchorTag(evt.target);
   const href = el?.getAttribute('href');
   if (el && href) {
