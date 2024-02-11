@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve",
-    "prepare": "husky && husky install"
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
