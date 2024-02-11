@@ -1,6 +1,6 @@
 {
   "**/*.js": [
-    "eslint",
+    "eslint . --fix",
     "prettier --write"
   ],
   "*.html": [
