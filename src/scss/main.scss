@@ -1,17 +1,5 @@
-html {
-    background: #aaa;
-}
+@import './utilities/variables';
 
-#progress-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-}
+@import './base/base';
 
-#progress-bar {
-    height: 100%;
-    background-color: #B33434;
-}
+@import './components/progress-loader';
