@@ -1,9 +1,8 @@
 ---
 title: Home
-layout: layouts/page.njk
+layout: layouts/page.html
 ---
 
 # About
 
 Helloo world.
-[Home](/)

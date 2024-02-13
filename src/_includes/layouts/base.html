@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="x-base-url" content="{{ site.url }}"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-base-url" content="{{ site.url }}" />
     <title>{{ title }} {% if site.name %} – {{ site.name }} {% endif %}</title>
     <link rel="stylesheet" href="/css/main.css" />
     {% block head %}{% endblock %}
@@ -12,9 +12,8 @@
     <div id="progress-container">
       <div id="progress-bar"></div>
     </div>
-    <main>
-      {% block content %}{% endblock %}
-    </main>
+    <nav>{% include "partials/navigation.html" %}</nav>
+    <main>{% block content %}{% endblock %}</main>
     <script src="/js/main.js" type="module"></script>
   </body>
 </html>

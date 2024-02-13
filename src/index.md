@@ -1,9 +1,0 @@
----
-title: Home
-layout: layouts/page.njk
----
-
-# Home
-
-Helloo world.
-[About](/about)
