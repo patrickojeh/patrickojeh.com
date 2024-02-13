@@ -5,20 +5,23 @@ module.exports = function (config) {
 
   config.addPlugin(eleventySass, {
     compileOptions: {
-      permalink: function() {
-        return data => data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
-      }
+      permalink: function () {
+        return (data) =>
+          data.page.filePathStem.replace(/^\/scss\//, '/css/') + '.css';
+      },
     },
     sass: {
-      style: "compressed",
-      sourceMap: false
-    }
+      style: 'compressed',
+      sourceMap: false,
+    },
   });
 
   return {
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     dir: {
-      input: "src",
-      output: "dist",
+      input: 'src',
+      output: 'dist',
     },
   };
 };

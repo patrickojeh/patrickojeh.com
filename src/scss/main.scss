@@ -1,5 +1,9 @@
 @import './utilities/variables';
 
-@import './base/base';
-
 @import './components/progress-loader';
+
+@import './vendors/skeleton';
+
+@import './vendors-extensions/skeleton';
+
+@import './base/base';
