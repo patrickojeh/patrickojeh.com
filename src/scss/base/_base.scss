@@ -9,10 +9,15 @@ body {
 body {
   background: $darkBrown;
   color: $offWhite;
+  font-family: $primary-font;
+  font-size: 1.55em;
   line-height: 1.7;
 }
 
 a {
   color: $white;
-  text-decoration: none;
+  text-decoration: underline;
+  &:hover {
+    color: $white;
+  }
 }
