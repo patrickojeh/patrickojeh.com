@@ -14,5 +14,8 @@ body {
 
 a {
   color: $white;
-  text-decoration: none;
+  text-decoration: underline;
+  &:hover {
+    color: $white;
+  }
 }
