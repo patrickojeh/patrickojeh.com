@@ -16,7 +16,16 @@ body {
 
 a {
   color: $white;
-  text-decoration: underline;
+  position: relative;
+  text-decoration: none;
+  &::before {
+    background: $white;
+    bottom: 0;
+    content: '';
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
   &:hover {
     color: $white;
   }
