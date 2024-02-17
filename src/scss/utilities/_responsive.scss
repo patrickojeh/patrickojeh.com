@@ -1,0 +1,30 @@
+$x-small: 400px;
+$small: 550px;
+$medium: 750px;
+$large: 1000px;
+$x-large: 1200px;
+
+@mixin responsive($size) {
+  @if $size == 'x-small' {
+    @media screen and (max-width: $x-small) {
+      @content;
+    }
+  } @else if $size == 'small' {
+    @media screen and (min-width: $small) {
+      @content;
+    }
+  }
+  @if $size == 'medium' {
+    @media screen and (min-width: $medium) {
+      @content;
+    }
+  } @else if $size == 'large' {
+    @media screen and (min-width: $large) {
+      @content;
+    }
+  } @else if $size == 'x-large' {
+    @media screen and (min-width: $x-large) {
+      @content;
+    }
+  }
+}
