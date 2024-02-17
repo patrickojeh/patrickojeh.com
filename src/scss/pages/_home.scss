@@ -1,5 +1,44 @@
-.project {
-  &__card-item {
-    background: blue;
+.projects {
+  &__featured {
+    padding-top: 16px;
+  }
+
+  &__featured-item {
+    $thumbnail-width: 80px;
+
+    @include responsive(x-small) {
+      $thumbnail-width: 64px;
+
+      grid-template-columns: 1fr;
+      padding: 14px 24px 20px;
+
+      img {
+        max-width: $thumbnail-width;
+      }
+    }
+
+    background: $brown;
+    border: 1px solid lighten($brown, 3%);
+    border-radius: 8px;
+    column-gap: 32px;
+    row-gap: 16px;
+    display: grid;
+    grid-template-columns: $thumbnail-width auto;
+    padding: 24px 32px 30px;
+
+    h6 {
+      font-size: inherit;
+      margin-bottom: 6px;
+    }
+
+    img {
+      border-radius: 8px;
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
