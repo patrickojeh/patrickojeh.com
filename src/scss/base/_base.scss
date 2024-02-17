@@ -10,17 +10,18 @@ body {
   background: $darkBrown;
   color: $offWhite;
   font-family: $primary-font;
-  font-size: 1.55em;
+  font-size: 1.6em;
   line-height: 1.7;
 }
 
 a {
   color: $white;
+  display: inline-block;
   position: relative;
   text-decoration: none;
   &::before {
     background: $white;
-    bottom: 0;
+    bottom: 3px;
     content: '';
     height: 1px;
     position: absolute;
@@ -29,4 +30,8 @@ a {
   &:hover {
     color: $white;
   }
+}
+
+img {
+  -webkit-user-drag: none;
 }
