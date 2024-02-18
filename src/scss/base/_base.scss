@@ -22,7 +22,7 @@ a {
   &::before {
     background: $white;
     bottom: 3px;
-    content: '';
+    content: unset;
     height: 1px;
     position: absolute;
     width: 100%;
