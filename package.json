@@ -19,6 +19,7 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
+    "del": "5.*",
     "eleventy-sass": "^2.2.4"
   },
   "lint-staged": {
