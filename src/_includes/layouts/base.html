@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="x-base-url" content="{{ site.url }}" />
+    <meta name="theme-color" content="#2b2018" />
     <title>{{ title }} {% if site.name %} – {{ site.name }} {% endif %}</title>
     <link rel="stylesheet" href="/css/main.css" />
     {% block head %}{% endblock %}
@@ -12,8 +13,13 @@
     <div id="progress-container">
       <div id="progress-bar"></div>
     </div>
-    <nav>{% include "partials/navigation.html" %}</nav>
+
+    {% include "partials/navigation.html" %}
+
     <main>{% block content %}{% endblock %}</main>
+
+    {% include "partials/footer.html" %}
+
     <script src="/js/main.js" type="module"></script>
   </body>
 </html>
