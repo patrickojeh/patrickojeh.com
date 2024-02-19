@@ -1,8 +1,6 @@
 @import './utilities/variables';
 @import './utilities/responsive';
 
-@import './components/progress-loader';
-
 @import './vendors/skeleton';
 
 @import './vendors-extensions/skeleton';
@@ -10,5 +8,10 @@
 @import './base/base';
 @import './base/fonts';
 @import './base/typography';
+
+@import './components/progress-loader';
+
+@import './layout/header';
+@import './layout/footer';
 
 @import './pages/home';
