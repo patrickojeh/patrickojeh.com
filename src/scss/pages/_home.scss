@@ -1,5 +1,9 @@
 .intro {
-  padding-top: 88px;
+  padding-top: 56px;
+
+  @include responsive(x-small) {
+    padding-top: 24px;
+  }
   &__photos {
     margin-bottom: 24px;
 

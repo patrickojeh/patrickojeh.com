@@ -1,0 +1,30 @@
+.primary-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  padding: 24px 32px;
+  position: sticky;
+  white-space: nowrap;
+  top: 0;
+  z-index: 1;
+  @include responsive(x-small) {
+    padding: 16px 20px;
+  }
+
+  ul {
+    column-gap: 32px;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    @include responsive(medium) {
+      display: flex;
+    }
+  }
+  li {
+    margin: 0;
+  }
+  a {
+    font-weight: 600;
+  }
+}
