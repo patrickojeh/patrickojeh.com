@@ -17,5 +17,9 @@
     color: $white;
     font-weight: 600;
     margin: 0;
+    i {
+      animation: 1s blinkText linear infinite;
+      font-style: normal;
+    }
   }
 }
