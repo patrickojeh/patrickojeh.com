@@ -45,6 +45,21 @@
   &__featured-item {
     $thumbnail-width: 80px;
 
+    background: $brown;
+    border: 1px solid lighten($brown, 3%);
+    border-radius: 8px;
+    column-gap: 32px;
+    row-gap: 16px;
+    display: grid;
+    grid-template-columns: $thumbnail-width auto;
+    padding: 24px 32px 30px;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+
     @include responsive(x-small) {
       grid-template-columns: 1fr;
       padding: 14px 24px 20px;
@@ -54,18 +69,10 @@
       }
     }
 
-    background: $brown;
-    border: 1px solid lighten($brown, 3%);
-    border-radius: 8px;
-    column-gap: 32px;
-    row-gap: 16px;
-    display: grid;
-    grid-template-columns: $thumbnail-width auto;
-    padding: 24px 32px 30px;
-
     &[data-disabled] {
       cursor: not-allowed;
       opacity: 0.35;
+      transform: none;
     }
 
     h6 {
