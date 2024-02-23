@@ -9,3 +9,13 @@ export const renderDate = () => {
 
   container.innerHTML = splitDate;
 };
+
+export const renderCopyrightYear = () => {
+  const timestamp = new Date();
+
+  const year = timestamp.getFullYear();
+
+  const container = document.querySelector('.primary-footer #year');
+
+  container.innerHTML = year;
+};

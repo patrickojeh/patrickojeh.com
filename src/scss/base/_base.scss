@@ -7,11 +7,13 @@ body {
 }
 
 body {
-  background: $darkBrown;
+  background: linear-gradient(to bottom, black 1%, #150f0c 26%) no-repeat
+    $darkBrown;
   color: $offWhite;
   font-family: $primary-font;
   font-size: 1.6em;
   line-height: 1.7;
+  min-height: 100vh;
 }
 
 a {
@@ -22,13 +24,20 @@ a {
   &::before {
     background: $white;
     bottom: 3px;
-    content: unset;
+    content: '';
     height: 1px;
     position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
     width: 100%;
   }
   &:hover {
     color: $white;
+    &::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
   }
 }
 
