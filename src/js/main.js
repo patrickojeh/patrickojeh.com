@@ -1,5 +1,5 @@
 import { load as initSPA } from './spa.js';
-import { renderDate } from './app.js';
+import { renderDate, renderCopyrightYear } from './app.js';
 import { getMilliSecondsLeft } from './utils/index.js';
 
 (function () {
@@ -7,6 +7,7 @@ import { getMilliSecondsLeft } from './utils/index.js';
     initSPA(document.location.pathname, false),
   );
 
+  renderCopyrightYear();
   renderDate();
 
   setInterval(() => renderDate(), getMilliSecondsLeft());
