@@ -12,6 +12,22 @@
     padding: 16px 20px;
   }
 
+  a::before {
+    content: unset;
+  }
+
+  .eight.columns {
+    @include responsive(medium) {
+      width: 72.3333333333%;
+    }
+    @include responsive(large) {
+      width: 70.5%;
+    }
+    @include responsive(x-large) {
+      width: 66.3333333333%;
+    }
+  }
+
   ul {
     column-gap: 32px;
     display: none;
