@@ -40,6 +40,10 @@
     gap: 24px;
     padding-bottom: 64px;
     padding-top: 16px;
+
+    a::before {
+      content: unset;
+    }
   }
 
   &__featured-item {

@@ -16,15 +16,29 @@
     content: unset;
   }
 
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      background: url('/images/svgs/bolt.svg') no-repeat transparent;
+      background-size: contain;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+    }
+  }
+
   .eight.columns {
     @include responsive(medium) {
-      width: 72.3333333333%;
+      width: 74.3333333333%;
     }
     @include responsive(large) {
-      width: 70.5%;
+      width: 72.5%;
     }
     @include responsive(x-large) {
-      width: 66.3333333333%;
+      width: 68.3333333333%;
     }
   }
 
