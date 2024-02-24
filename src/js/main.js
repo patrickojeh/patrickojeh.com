@@ -1,14 +1,10 @@
-import { load as initSPA } from './spa.js';
-import { renderDate, renderCopyrightYear } from './app.js';
-import { getMilliSecondsLeft } from './utils/index.js';
+import SPA from './spa.js';
+import init from './app.js';
 
 (function () {
   window.addEventListener('popstate', () =>
-    initSPA(document.location.pathname, false),
+    SPA(document.location.pathname, false),
   );
 
-  renderCopyrightYear();
-  renderDate();
-
-  setInterval(() => renderDate(), getMilliSecondsLeft());
+  init();
 })();

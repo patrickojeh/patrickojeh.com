@@ -1,6 +1,6 @@
-import { getDate } from './utils/index.js';
+import { getDate, getMilliSecondsLeft } from './utils/index.js';
 
-export const renderDate = () => {
+const renderDate = () => {
   const date = getDate();
 
   const splitDate = date.split(':').join('<i>:</i>');
@@ -10,7 +10,7 @@ export const renderDate = () => {
   container.innerHTML = splitDate;
 };
 
-export const renderCopyrightYear = () => {
+const renderCopyrightYear = () => {
   const timestamp = new Date();
 
   const year = timestamp.getFullYear();
@@ -19,3 +19,12 @@ export const renderCopyrightYear = () => {
 
   container.innerHTML = year;
 };
+
+const init = () => {
+  renderCopyrightYear();
+  renderDate();
+
+  setInterval(() => renderDate(), getMilliSecondsLeft());
+};
+
+export default init;
