@@ -44,6 +44,10 @@
     a::before {
       content: unset;
     }
+
+    a p {
+      color: $offWhite;
+    }
   }
 
   &__featured-item {
