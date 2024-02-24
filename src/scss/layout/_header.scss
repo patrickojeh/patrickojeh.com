@@ -1,8 +1,9 @@
 .primary-header {
   align-items: center;
+  background: rgba($black, 1%);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
-  mix-blend-mode: difference;
   padding: 24px 32px;
   position: sticky;
   white-space: nowrap;
