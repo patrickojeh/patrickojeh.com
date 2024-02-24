@@ -107,7 +107,7 @@
   .noisy__pattern {
     background-image: url('/images/graphics/noise.png');
     animation: noisyBg 1s steps(2) infinite;
-    filter: invert(0.7);
+    filter: invert(0.85);
     position: fixed;
     top: -10rem;
     left: -10rem;
