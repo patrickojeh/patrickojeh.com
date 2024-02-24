@@ -9,9 +9,13 @@ const dir = {
 };
 
 module.exports = function (config) {
+  const name = 'Patrick Ojeh';
+
   const outputDir = path.resolve(dir.output, '*');
 
   del.sync(outputDir, { dot: true });
+
+  config.addGlobalData('site', { name });
 
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/js/');
