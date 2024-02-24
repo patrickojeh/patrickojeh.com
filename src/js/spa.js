@@ -3,7 +3,7 @@
  * @param {string} href URL to route to
  * @param {boolean} pushState whether to call history.pushState or not
  */
-export function load(href, pushState) {
+function load(href, pushState) {
   const container = $('main');
   const progressBar = document.getElementById('progress-bar');
   const progressContainer = document.getElementById('progress-container');
@@ -95,3 +95,5 @@ window.addEventListener('click', (evt) => {
     }
   }
 });
+
+export default load;
