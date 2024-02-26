@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'messina';
   src: url('/fonts/MessinaSans-Regular.ttf') format('truetype');
-  font-display: block;
+  font-display: swap;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'messina';
   src: url('/fonts/MessinaSans-SemiBold.ttf') format('truetype');
-  font-display: block;
+  font-display: swap;
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'sharp grotesk';
   src: url('/fonts/SharpGrotesk-Medium25.otf') format('opentype');
-  font-display: block;
+  font-display: swap;
   font-weight: 500;
 }
