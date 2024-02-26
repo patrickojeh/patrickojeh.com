@@ -19,6 +19,7 @@
       visibility: hidden;
       img {
         animation: scaleImgOut 1s ease-out forwards;
+        height: auto;
       }
 
       &--2 {
@@ -104,6 +105,7 @@
     img {
       border-radius: 8px;
       margin-top: 5px;
+      height: auto;
       width: 100%;
     }
 
