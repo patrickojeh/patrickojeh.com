@@ -20,7 +20,23 @@ const renderCopyrightYear = () => {
   container.innerHTML = year;
 };
 
+const scrollSectionHide = () => {
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.intro__photos');
+    const scrolled = document.documentElement.getBoundingClientRect().top;
+
+    if (!document.contains(section)) return;
+
+    if (scrolled < -220) {
+      section.classList.add('hide');
+    } else {
+      section.classList.remove('hide');
+    }
+  });
+};
+
 const init = () => {
+  scrollSectionHide();
   renderCopyrightYear();
   renderDate();
 
