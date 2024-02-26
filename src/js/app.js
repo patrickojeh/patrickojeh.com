@@ -28,10 +28,8 @@ const scrollSectionHide = () => {
     if (!document.contains(section)) return;
 
     if (scrolled < -220) {
-      console.log('hidd');
       section.classList.add('hide');
     } else {
-      console.log('showww');
       section.classList.remove('hide');
     }
   });
