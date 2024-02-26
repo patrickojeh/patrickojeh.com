@@ -16,10 +16,12 @@
 
     .clip {
       animation: revealImg 0.3s cubic-bezier(0.5, 0, 0.8, 1) forwards;
+      overflow: hidden;
       visibility: hidden;
       img {
         animation: scaleImgOut 1s ease-out forwards;
         height: auto;
+        margin-bottom: -8px;
       }
 
       &--2 {
