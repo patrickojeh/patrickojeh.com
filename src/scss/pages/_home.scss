@@ -21,14 +21,6 @@
       transform: rotate(3deg);
     }
 
-    & > .columns img {
-      transition: 0.5s ease-out transform;
-      transform-origin: top;
-      &:hover {
-        transform: rotate(0deg);
-      }
-    }
-
     .hidden-xs {
       display: none;
     }
@@ -115,7 +107,7 @@
   .noisy__pattern {
     background-image: url('/images/graphics/noise.png');
     animation: noisyBg 1s steps(2) infinite;
-    filter: invert(0.85);
+    filter: invert(0.7);
     position: fixed;
     top: -10rem;
     left: -10rem;
