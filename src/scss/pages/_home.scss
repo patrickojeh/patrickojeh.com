@@ -6,12 +6,21 @@
   }
   &__photos {
     margin-bottom: 24px;
+    opacity: 1;
+    transition: 1s;
+    transform: none;
 
     @include responsive(x-small) {
       column-gap: 16px;
       gap: 32px;
       justify-content: space-between;
       margin-bottom: 0;
+    }
+
+    &.hide {
+      transition: 1s;
+      opacity: 0;
+      transform: scale(0.95) rotate3d(1, 0, 0, 10deg);
     }
 
     .clip {
