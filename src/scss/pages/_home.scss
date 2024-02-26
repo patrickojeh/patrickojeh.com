@@ -15,16 +15,16 @@
     }
 
     .clip {
-      animation: revealImg 0.3s ease-out forwards;
+      animation: revealImg 0.3s cubic-bezier(0.5, 0, 0.8, 1) forwards;
       visibility: hidden;
       img {
         animation: scaleImgOut 1s ease-out forwards;
       }
 
       &--2 {
-        animation-delay: 0.15s;
+        animation-delay: 0.2s;
         img {
-          animation-delay: 0.15s;
+          animation-delay: 0.2s;
         }
       }
     }
