@@ -13,6 +13,25 @@
   }
 }
 
+@keyframes revealImg {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    visibility: visible;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes scaleImgOut {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @keyframes noisyBg {
   10% {
     transform: translate3d(2rem, -9rem, 0);

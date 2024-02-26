@@ -14,7 +14,22 @@
       margin-bottom: 0;
     }
 
-    & > .columns:first-child img {
+    .clip {
+      animation: revealImg 0.3s ease-out forwards;
+      visibility: hidden;
+      img {
+        animation: scaleImgOut 1s ease-out forwards;
+      }
+
+      &--2 {
+        animation-delay: 0.15s;
+        img {
+          animation-delay: 0.15s;
+        }
+      }
+    }
+
+    & > .columns:first-child .clip {
       transform: rotate(-6deg);
     }
     & > .columns:last-child img {
