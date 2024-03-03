@@ -1,0 +1,26 @@
+.about {
+  &__photo {
+    border-radius: 8px;
+    width: auto;
+  }
+
+  .clip {
+    animation: revealImg 0.3s cubic-bezier(0.5, 0, 0.8, 1) forwards;
+    float: left;
+    margin: 0 38px 24px 0;
+    overflow: hidden;
+    transform: rotate(2deg);
+    visibility: hidden;
+    width: 200px;
+    img {
+      animation: scaleImgOut 1s ease-out forwards;
+      margin-bottom: -8px;
+    }
+  }
+
+  .hidden-xs {
+    @include responsive(x-small) {
+      display: none;
+    }
+  }
+}
